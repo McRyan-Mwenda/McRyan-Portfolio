@@ -1,7 +1,114 @@
 /* Bulma css framework cdn */
+
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
+
 /* Bulma css framework cdn */
 
+/* Google fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@500&family=Caveat&family=Pacifico&display=swap");
+
+/* 
+font-family: 'Arima Madurai', cursive;
+font-family: 'Caveat', cursive;
+font-family: 'Pacifico', cursive;
+*/
+
+/* Google fonts */
+
+/* color pallets */
+
+/* 
+background => #1f3044
+text => antiquewhite
+*/
+
+/* color pallets */
+
 /* custom styles */
+
+body,
+html {
+  font-family: "Arima Madurai", cursive !important;
+  background-color: #1f3044 !important;
+  color: antiquewhite !important;
+}
+
+.logo {
+  font-family: "Pacifico", cursive !important;
+}
+
+.nav-body,
+.footer-body {
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+}
+
+.main-body {
+  min-height: 100vh !important;
+}
+
+.nav-links,
+.footer-body {
+  font-family: "Caveat", cursive !important;
+  font-size: x-large;
+}
+
+.nav-links:hover,
+.links:hover {
+  text-decoration: underline;
+}
+
+.divider-top {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+  background-color: lightgray !important;
+}
+
+.divider-bottom {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+  background-color: lightgray !important;
+}
+
+.normal-font {
+  font-family: "Arima Madurai", cursive !important;
+}
+
+.intro img {
+  border-radius: 0.5rem;
+}
+
+.card {
+  height: auto !important;
+  width: 100% !important;
+  background-color: rgba(255, 255, 255, 0.13) !important;
+}
+
+.recent-blog-container,
+.recent-podcast-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around !important;
+  align-items: center;
+}
+
+.divider-blank {
+  background-color: transparent !important;
+  margin: 0.5rem 0 !important;
+}
+
+.divider-in-content {
+  background-color: lightgray !important;
+  /* margin: 0.5rem 0 !important; */
+  height: 1px !important;
+}
+
+.blog-podcast-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
 
 /* custom styles */

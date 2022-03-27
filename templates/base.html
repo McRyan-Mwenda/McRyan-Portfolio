@@ -57,25 +57,78 @@
   </head>
   <body>
     <!-- navigation -->
-    <div class="container is-fluid">
+    <div class="container is-fluid nav-body">
       <nav class="level">
-        <div class="level-left">
-          <p class="subtitle">Freedom Loisa</p>
+        <div class="level-item has-text-centered">
+          <a href="#" class="nav-links has-text-light">Blog</a>
         </div>
-        <div class="level-right"></div>
+        <div class="level-item has-text-centered">
+          <a href="#" class="nav-links has-text-light">Podcasts</a>
+        </div>
+        <div class="level-item navbar-brand has-text-centered">
+          <a
+            href="{% url 'home' %}"
+            class="logo subtitle is-size-1 has-text-light"
+            >F.L.</a
+          >
+        </div>
+        <div class="level-item has-text-centered">
+          <a href="#" class="nav-links has-text-light">Portfolio</a>
+        </div>
+        <div class="level-item has-text-centered">
+          <a href="#" class="nav-links has-text-light">Contact</a>
+        </div>
       </nav>
     </div>
     <!-- navigation -->
 
-    <!-- main body -->
+    <!-- nav and body divider -->
     <div class="container is-fluid">
+      <hr class="divider-top" />
+    </div>
+    <!-- nav and body divider -->
+
+    <!-- main body -->
+    <div class="main-body container is-fluid">
       {% block body %}
       <!--  -->
       {% endblock %}
     </div>
     <!-- main body -->
 
+    <!-- footer and body divider -->
+    <div class="container is-fluid">
+      <hr class="divider-bottom" />
+    </div>
+    <!-- footer and body divider -->
+
     <!-- footer -->
+    <div class="footer-body container is-fluid">
+      <div class="level container is-fluid">
+        <div class="level-left">
+          <p class="level-item">
+            Check out my other site...
+            <a href="#" class="links has-text-primary">Just thinking</a>
+          </p>
+        </div>
+        <div class="level-right">
+          <p class="level-item has-text-centered">&#169; 2021 Freedom Loisa.</p>
+          <p class="level-item has-text-centered normal-font">|</p>
+          <a href="#" class="level-item has-text-centered has-text-info"
+            ><i class="bi bi-twitter"></i
+          ></a>
+          <a href="#" class="level-item has-text-centered has-text-link"
+            ><i class="bi bi-facebook"></i
+          ></a>
+          <a href="#" class="level-item has-text-centered has-text-danger"
+            ><i class="bi bi-youtube"></i
+          ></a>
+          <a href="#" class="level-item has-text-centered has-text-primary"
+            ><i class="bi bi-spotify"></i
+          ></a>
+        </div>
+      </div>
+    </div>
     <!-- footer -->
   </body>
   <!-- local js -->
