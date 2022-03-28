@@ -82,7 +82,7 @@
           >
         </div>
         <div class="level-item has-text-centered">
-          <a href="#" class="nav-links has-text-primary"
+          <a href="{% url 'contact' %}" class="nav-links has-text-primary"
             ><i class="bi bi-telephone is-size-5"></i> Contact</a
           >
         </div>
@@ -141,6 +141,10 @@
       </div>
     </div>
     <!-- footer -->
+
+    <!-- messages section -->
+    {% include 'messages.html' %}
+    <!-- messages section -->
   </body>
   <!-- local js -->
   <script src="{% static 'js/main.js' %}"></script>

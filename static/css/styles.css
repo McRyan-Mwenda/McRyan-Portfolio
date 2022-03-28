@@ -78,11 +78,12 @@ html {
 }
 
 .intro,
-.about-intro {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+.about-intro,
+.contact-container {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-around !important;
+  align-items: center !important;
 }
 
 .intro-caption,
@@ -134,6 +135,30 @@ html {
 .my-skills {
   width: 50%;
   margin: 0 1rem;
+}
+
+.contact-container {
+  margin-top: 6rem;
+}
+
+.contact-intro {
+  width: 50%;
+}
+
+.contact-form {
+  width: 40%;
+}
+
+.btn-ctrl {
+  width: fit-content;
+  margin: auto;
+}
+
+.app-message {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  width: fit-content;
 }
 
 /* custom styles */
