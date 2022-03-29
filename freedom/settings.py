@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 import os
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -39,6 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core',
+    'ckeditor',
+    'cloudinary',
 ]
 
 MIDDLEWARE = [
@@ -154,3 +159,21 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'loisadevmode@gmail.com'
 EMAIL_HOST_PASSWORD = '#Kitloisa15'
 RECIPIENT_ADDRESS = 'kitakayaloisa@gmail.com'
+
+# CK-EDITOR custom configs
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'full',
+        'height': 600,
+    },
+}
+
+CKEDITOR_UPLOAD_PATH = "articles/"
+
+# cloudinary configs
+cloudinary.config( 
+  cloud_name = "dit0fii18", 
+  api_key = "488158286488541", 
+  api_secret = "15AEbpxsXhNF828AaNQtQy7iOR0",
+  secure = True
+)
