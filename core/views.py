@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.core.mail import EmailMultiAlternatives
 from django.conf import settings
 from django.template.loader import render_to_string
+from .models import Article
 
 # Create your views here.
 
@@ -43,3 +44,23 @@ def contact(request):
         messages.success(request, 'Your message has been sent successfully.')
 
     return render(request, 'core/contact.html')
+
+def articles(request):
+
+    all_articles = Article.objects.all()
+
+    context = {
+        'articles': all_articles,
+    }
+
+    return render(request, 'core/all_articles.html', context)
+
+def open_article(request, slug):
+
+    this_article = Article.objects.get(slug = slug)
+
+    context = {
+        'article': this_article,
+    }
+
+    return render(request, 'core/this_article.html', context)

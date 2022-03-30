@@ -161,4 +161,10 @@ html {
   width: fit-content;
 }
 
+.this-article-container,
+.articles-container {
+  width: 80%;
+  margin: auto;
+}
+
 /* custom styles */
