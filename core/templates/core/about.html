@@ -1,0 +1,350 @@
+<!-- inherit template -->
+{% extends 'base.html' %}
+<!-- inherit template -->
+
+<!-- load static -->
+{% load static %}
+<!-- load static -->
+
+<!-- title -->
+
+<!-- extend title block -->
+{% block title %} About {% endblock %}
+<!-- extend title block -->
+
+<!-- title -->
+
+<!-- body -->
+
+<!-- extend body block -->
+{% block body %}
+<!--  -->
+<div class="parent container is-fluid">
+  <!--  -->
+  <p
+    class="title has-text-warning has-text-centered is-align-self-center"
+    id="about-section"
+  >
+    About me
+  </p>
+
+  <!-- section -->
+  <hr class="divider-separator" />
+  <!-- section -->
+
+  <!-- intro -->
+  <div class="intro">
+    <div class="intro-caption">
+      <p class="title has-text-danger is-size-1">Freedom Loisa</p>
+      <p class="subtitle has-text-warning is-size6 is-italic">
+        But you can call me Loisa
+      </p>
+      <p class="has-text-light is-size-5">
+        I'm a software developer, digital strategist, entrepreneur and brand
+        builder who loves fresh ideas, ambitious challenges, fast-paced startups
+        and energizing conversations.
+      </p>
+    </div>
+    <div class="intro-image">
+      <!-- slider section -->
+      {% include 'slider.html' %}
+      <!-- slider section -->
+    </div>
+  </div>
+  <!-- intro -->
+
+  <!-- section -->
+  <hr class="divider-separator" />
+  <!-- section -->
+
+  <!-- about Loisa details -->
+  <div class="about-container">
+    <div class="me-personally is-size-5">
+      <p class="subtitle has-text-warning is-size-3">Who am I?</p>
+      <p class="about-content is-size-5">
+        I'm a fullstack web developer and brand builder who thrives off a
+        challenge. I'm a social butterfly who loves people and building
+        meaningful connections. I'm a leader, a doer and a life-long learner.
+
+        <br />
+        <br />
+
+        I'm strategic and tactical, a visionary who loves the details, creative,
+        yet practical. I care about tangible results and exceptional work.
+
+        <br />
+        <br />
+
+        People often describe me as: authentic, driven and passionate. Which
+        pretty much means that I really care.
+      </p>
+
+      <br />
+
+      <p>
+        Want to work with me?
+        <a href="{% url 'contact' %}" class="has-text-info is-underlined"
+          >Get in touch!</a
+        >
+      </p>
+
+      <br />
+
+      <p class="subtitle has-text-warning is-size-3">My journey</p>
+      <p>
+        I used to want to become a professional rugby player. But soon after
+        completing my highschool I realized I had a passion for coding after
+        being introduced to a C++ tutorial by a friend.
+
+        <br />
+        <br />
+
+        Given my new found passion, the next logical step for me was to join
+        university and pursue a course which would allow me to learn more about
+        coding and creating software. I joined the Jomo Kenyatta University of
+        Agriculture and Technology; however I soon felt dissatisfied with my
+        learning experience in university. I therefore dropped out and decided
+        to become my own teacher.
+
+        <br />
+        <br />
+
+        Quitting university obviously came with a lot of backlash from friends
+        and family and as a result I developed a deep depression and self-doubt
+        that crippled me for several years. I lost all confidence in myself and
+        my capabilities. This was a hard time for me. I felt lost and devoid of
+        purpose.
+
+        <br />
+        <br />
+
+        In the recent past however, I have been fortunate enough to get help and
+        mentorship from a very good counsellor. With her assistance I
+        rediscovered my passion for software development and I was able to
+        develop clarity of where I was at the moment and where I wanted to be in
+        future.
+
+        <br />
+        <br />
+
+        Soon after I began my self-education and self-development journey. In
+        the past year, I have learned so much – about myself, coding and
+        software development, the world, writing, speaking, and so much more.
+
+        <br />
+        <br />
+
+        One of the things that has become apparent to me throughout this
+        journey, is that if you have a dream and make achieving your dream your
+        top priority, nothing will stand in your way.
+
+        <br />
+        <br />
+
+        Today, I am a confident fullstack web developer, an entrepreneur and a
+        pretty good writer – however my journey of self-development and
+        self-improvement doesn't stop there, it is a journey I shall continue
+        embarking on in all dimensions of my professional, personal, and
+        inter-personal life.
+      </p>
+
+      <br />
+      <p class="subtitle has-text-warning is-size-3">
+        Favorite software development books
+      </p>
+      <ul class="about-content is-size-5">
+        <li>
+          <i class="bi bi-arrow-right-short"></i> The Clean Coder: A Code of
+          Conduct for Professional Programmers
+        </li>
+        <li>
+          <i class="bi bi-arrow-right-short"></i> Design Patterns: Elements of
+          Reusable Object-Oriented Software
+        </li>
+        <li>
+          <i class="bi bi-arrow-right-short"></i> Cracking Codes With Python: An
+          Introduction to Building and Breaking Ciphers
+        </li>
+      </ul>
+    </div>
+    <div class="my-skills">
+      <p class="subtitle has-text-warning is-size-3">
+        Personal & Inter-personal skills
+      </p>
+      <!--  -->
+      <p class="is-size-5">Active listening</p>
+      <progress class="progress is-primary" value="77" max="100">77%</progress>
+      <!--  -->
+      <br />
+      <!--  -->
+      <p class="is-size-5">Communication & Ideation</p>
+      <progress class="progress is-primary" value="71" max="100">71%</progress>
+      <!--  -->
+      <br />
+      <!--  -->
+      <p class="is-size-5">Teamwork & Leadership</p>
+      <progress class="progress is-primary" value="72" max="100">72%</progress>
+      <!--  -->
+      <br />
+      <!--  -->
+      <p class="is-size-5">Dependability & Responsibility</p>
+      <progress class="progress is-primary" value="76" max="100">76%</progress>
+      <!--  -->
+      <br />
+      <!--  -->
+      <p class="is-size-5">Motivation</p>
+      <progress class="progress is-primary" value="73" max="100">73%</progress>
+      <!--  -->
+      <br />
+      <!--  -->
+      <p class="is-size-5">Flexibility</p>
+      <progress class="progress is-primary" value="75" max="100">75%</progress>
+      <!--  -->
+      <br />
+      <!--  -->
+      <p class="is-size-5">Patience</p>
+      <progress class="progress is-primary" value="74" max="100">74%</progress>
+      <!--  -->
+      <br />
+      <p class="subtitle has-text-warning is-size-3">
+        Technical & Professional skills
+      </p>
+      <!--  -->
+      <p class="is-size-5">HTML/CSS/SCSS</p>
+      <progress class="progress is-danger" value="75" max="100">75%</progress>
+      <!--  -->
+      <br />
+      <!--  -->
+      <p class="is-size-5">JavaScript/JQuery</p>
+      <progress class="progress is-danger" value="72" max="100">72%</progress>
+      <!--  -->
+      <br />
+      <!--  -->
+      <p class="is-size-5">AJAX/Axios/JSON</p>
+      <progress class="progress is-danger" value="69" max="100">69%</progress>
+      <!--  -->
+      <br />
+      <!--  -->
+      <p class="is-size-5">Vue.Js/React.Js</p>
+      <progress class="progress is-danger" value="65" max="100">65%</progress>
+      <!--  -->
+      <br />
+      <!--  -->
+      <p class="is-size-5">Bootstrap/Bulma/Tailwind</p>
+      <progress class="progress is-danger" value="84" max="100">84%</progress>
+      <!--  -->
+      <br />
+      <!--  -->
+      <p class="is-size-5">Python</p>
+      <progress class="progress is-info" value="70" max="100">70%</progress>
+      <!--  -->
+      <br />
+      <!--  -->
+      <p class="is-size-5">Django</p>
+      <progress class="progress is-info" value="75" max="100">75%</progress>
+      <!--  -->
+      <br />
+      <!--  -->
+      <p class="is-size-5">PostgreSQL/SQLite3</p>
+      <progress class="progress is-info" value="73" max="100">73%</progress>
+      <!--  -->
+      <br />
+      <!--  -->
+      <p class="is-size-5">HTTP/REST/GraphQL</p>
+      <progress class="progress is-info" value="68" max="100">68%</progress>
+      <!--  -->
+      <br />
+      <!--  -->
+      <p class="is-size-5">Git/GitHub</p>
+      <progress class="progress is-info" value="78" max="100">78%</progress>
+      <!--  -->
+      <br />
+      <!--  -->
+      <p class="is-size-5">Technical writing & documentation</p>
+      <progress class="progress is-dark" value="68" max="100">58%</progress>
+      <!--  -->
+      <br />
+      <!--  -->
+      <p class="is-size-5">OS Proficiency (Windows & Linux)</p>
+      <progress class="progress is-dark" value="76" max="100">76%</progress>
+      <!--  -->
+      <br />
+      <!--  -->
+      <p class="is-size-5">Agile software development</p>
+      <progress class="progress is-dark" value="70" max="100">70%</progress>
+      <!--  -->
+    </div>
+  </div>
+  <!-- about Loisa details -->
+
+  <!-- section -->
+  <hr class="divider-separator" />
+  <!-- section -->
+
+  <!-- education and experience -->
+  <div class="about-container has-text-centered">
+    <div class="education is-size-5">
+      <p class="subtitle is-size-3 has-text-warning">Education</p>
+      <!--  -->
+      <p class="is-size-4 has-text-danger">
+        Monthly 1-on-1 Leadership Coaching
+      </p>
+      <p>with Erin Sills / 2017</p>
+      <!--  -->
+      <!--  -->
+      <p class="is-size-4 has-text-danger">Roy Group Leadership Program</p>
+      <p>by Roy Group / 2017</p>
+      <!--  -->
+      <!--  -->
+      <p class="is-size-4 has-text-danger">
+        Helping Clients Succeed Training Program
+      </p>
+      <p>by Franklin Covey / 2017</p>
+      <!--  -->
+      <!--  -->
+      <p class="is-size-4 has-text-danger">
+        Emerging Business Leadership Program
+      </p>
+      <p>by ViRTUS / 2016</p>
+      <!--  -->
+      <!--  -->
+      <p class="is-size-4 has-text-danger">
+        Bachelor of Commerce, Marketing & Entrepreneurship Specialization
+      </p>
+      <p>at University of Victoria, Victoria, Canada / 2008-2012</p>
+      <!--  -->
+    </div>
+    <div class="experience is-size-5">
+      <p class="subtitle is-size-3 has-text-warning">Experience</p>
+      <!--  -->
+      <p class="is-size-4 has-text-danger">Co-Founder at Shine</p>
+      <p>Shine Bootcamp / spring 2018 – present</p>
+      <!--  -->
+      <!--  -->
+      <p class="is-size-4 has-text-danger">Director of Marketing</p>
+      <p>
+        – from Individual Contributor to leading marketing teams at Unbounce /
+        fall 2012 – spring 2018
+      </p>
+      <!--  -->
+      <!--  -->
+      <p class="is-size-4 has-text-danger">Digital Marketer</p>
+      <p>at Tennis BC (Contract Work) / 2013</p>
+      <!--  -->
+      <!--  -->
+      <p class="is-size-4 has-text-danger">Traditional Marketer</p>
+      <p>at Imperial Oil / 2012</p>
+      <!--  -->
+      <!--  -->
+      <p class="is-size-4 has-text-danger">Communications & Marketing</p>
+      <p>at Intact Insurance / 2011</p>
+      <!--  -->
+    </div>
+  </div>
+  <!-- education and experience -->
+</div>
+<!--  -->
+{% endblock %}
+<!-- extend body block -->
+
+<!-- body -->

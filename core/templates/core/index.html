@@ -29,12 +29,14 @@
         into impactful and memorable experiences through software.
       </p>
       <br />
-      <a href="{% url 'contact' %}" class="has-text-dark button is-primary"
-        >Get in touch</a
+      <a href="{% url 'about_me' %}" class="has-text-dark button is-primary"
+        >Curious to know more?</a
       >
     </div>
     <div class="intro-image">
-      <img src="{% static 'img/Freedom-loisa.png' %}" alt="" />
+      <!-- slider section -->
+      {% include 'slider.html' %}
+      <!-- slider section -->
     </div>
   </div>
   <!-- intro -->
@@ -43,115 +45,42 @@
   <hr class="divider-separator" />
   <!-- section -->
 
-  <p class="about-title title has-text-warning" id="about-section">About me</p>
-
-  <!-- about Loisa details -->
-  <div class="about-container">
-    <div class="me-personally">
-      <p class="title has-text-danger is-size-1">Freedom Loisa</p>
-      <p class="subtitle has-text-warning is-size6 is-italic">
-        But you can call me Loisa
-      </p>
-      <p class="has-text-light is-size-5">
-        I'm a software developer, digital strategist, entrepreneur and brand
-        builder who loves fresh ideas, ambitious challenges, fast-paced startups
-        and energizing conversations.
-      </p>
-      <br>
-      <p class="subtitle has-text-warning is-size-3">Who am I?</p>
-      <p class="about-content is-size-5">
-        I'm a fullstack web developer and brand builder who thrives
-        off a challenge. I'm a social butterfly who loves people and building
-        meaningful connections. I'm a leader, a doer and a life-long learner.
-        <br />
-        I'm strategic and tactical, a visionary who loves the details, creative,
-        yet practical. I care about tangible results and exceptional work.
-        <br />
-        People often describe me as: authentic, driven and passionate. Which
-        pretty much means that I really care.
-      </p>
-      <br>
-      <p class="subtitle has-text-warning is-size-3">My strengths</p>
-      <p class="about-content is-size-5">
-        <ul class="is-size-5">
-          <li><i class="bi bi-arrow-right-short"></i> Attention to detail</li>
-          <li><i class="bi bi-arrow-right-short"></i> Organization and prioritization</li>
-          <li><i class="bi bi-arrow-right-short"></i> Communication</li>
-          <li><i class="bi bi-arrow-right-short"></i> Ideation</li>
-        </ul>
-      </p>
-      <br>
-      <p class="subtitle has-text-warning is-size-3">Favorite software development books</p>
-      <p class="about-content is-size-5">
-        <ul class="is-size-5">
-          <li><i class="bi bi-arrow-right-short"></i> The Clean Coder: A Code of Conduct for Professional Programmers</li>
-          <li><i class="bi bi-arrow-right-short"></i> Design Patterns: Elements of Reusable Object-Oriented Software</li>
-          <li><i class="bi bi-arrow-right-short"></i> Cracking Codes With Python: An Introduction to Building and Breaking Ciphers</li>
-        </ul>
+  <div class="level container is-fluid">
+    <div class="level-left">
+      <p
+        class="title has-text-warning is-align-self-center level-item"
+        id="portfolio-section"
+      >
+        Portfolio
       </p>
     </div>
-    <div class="my-skills">
-      <p class="subtitle has-text-warning is-size-3">Technical skills & strengths</p>
+    <div class="level-right">
       <!--  -->
-      <p class="is-size-5">HTML/CSS</p>
-      <progress class="progress is-danger" value="95" max="100">95%</progress>
-      <!--  -->
-      <br>
-      <!--  -->
-      <p class="is-size-5">Vue.Js & NPM</p>
-      <progress class="progress is-danger" value="70" max="100">70%</progress>
-      <!--  -->
-      <br>
-      <!--  -->
-      <p class="is-size-5">JavaScript & JQuery</p>
-      <progress class="progress is-danger" value="84" max="100">84%</progress>
-      <!--  -->
-      <br>
-      <!--  -->
-      <p class="is-size-5">AJAX & Axios</p>
-      <progress class="progress is-danger" value="90" max="100">90%</progress>
-      <!--  -->
-      <br>
-      <!--  -->
-      <p class="is-size-5">Python</p>
-      <progress class="progress is-danger" value="80" max="100">80%</progress>
-      <!--  -->
-      <br>
-      <!--  -->
-      <p class="is-size-5">Django <small>(python framework)</small></p>
-      <progress class="progress is-danger" value="75" max="100">75%</progress>
-      <!--  -->
-      <br>
-      <!--  -->
-      <p class="is-size-5">PostgreSQL</small></p>
-      <progress class="progress is-danger" value="78" max="100">78%</progress>
-      <!--  -->
-      <br>
-      <!--  -->
-      <p class="is-size-5">Git & GitHub</small></p>
-      <progress class="progress is-danger" value="88" max="100">88%</progress>
-      <!--  -->
-      <br>
-      <!--  -->
-      <p class="is-size-5">Attention to detail & Organization</small></p>
-      <progress class="progress is-primary" value="96" max="100">96%</progress>
-      <!--  -->
-      <br>
-      <!--  -->
-      <p class="is-size-5">Communication & Ideation</small></p>
-      <progress class="progress is-primary" value="94" max="100">94%</progress>
-      <!--  -->
-      <br>
-      <!--  -->
-      <p class="is-size-5">Willingness to learn</small></p>
-      <progress class="progress is-primary" value="100" max="100">100%</progress>
+      <div class="tabs is-centered is-align-self-center level-item">
+        <ul>
+          <li class="is-active">
+            <a class="has-text-light">
+              <span>Freelance/Work Projects</span>
+            </a>
+          </li>
+          <li>
+            <a class="has-text-light">
+              <span>Personal Projects</span>
+            </a>
+          </li>
+        </ul>
+      </div>
       <!--  -->
     </div>
   </div>
-  <!-- about Loisa details -->
 
-  <!-- about section -->
+  <!-- section -->
+  <hr class="divider-separator" />
+  <!-- section -->
 
+  <!-- portfolio section -->
+  <div class="portfolio-container"></div>
+  <!-- portfolio section -->
 </div>
 <!--  -->
 {% endblock %}

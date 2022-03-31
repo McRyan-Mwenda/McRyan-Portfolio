@@ -64,3 +64,7 @@ def open_article(request, slug):
     }
 
     return render(request, 'core/this_article.html', context)
+
+def about_me(request):
+
+    return render(request, 'core/about.html')
