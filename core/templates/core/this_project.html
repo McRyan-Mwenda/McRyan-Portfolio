@@ -1,0 +1,122 @@
+<!-- inherit template -->
+{% extends 'base.html' %}
+<!-- inherit template -->
+
+<!-- load static -->
+{% load static %}
+<!-- load static -->
+
+<!-- title -->
+
+<!-- extend title block -->
+{% block title %} Projects {% endblock %}
+<!-- extend title block -->
+
+<!-- title -->
+
+<!-- body -->
+
+<!-- extend body block -->
+{% block body %}
+<!--  -->
+<div class="parent container is-fluid">
+  <!--  -->
+  <div class="this-article-container">
+    <!--  -->
+
+    <!-- if -->
+    {% if project %}
+    <!-- if -->
+
+    <div class="article-in-detail">
+      <!--  -->
+      <div class="article-intro has-text-centered">
+        <p class="is-size-2 has-text-weight-semibold has-text-warning">
+          {{ project.project_name }}
+        </p>
+        <p class="has-text-light">
+          click link <i class="bi bi-arrow-right-short"></i>
+          <a
+            href="{{ project.project_url }}"
+            class="subtitle has-text-info is-size-5"
+          >
+            {{ project.project_url }}
+          </a>
+        </p>
+      </div>
+
+      <!-- section -->
+      <hr class="divider-separator" />
+      <!-- section -->
+
+      <div class="article-content card">
+        <div class="card-image">
+          <figure class="image is-2by1">
+            <img
+              src="{{ project.image_context.url }}"
+              alt="{{ project.project_name }}"
+            />
+          </figure>
+        </div>
+        <div class="card-content">
+          <!-- section -->
+          <hr class="divider-separator" />
+          <!-- section -->
+
+          <p class="subtitle">Role: {{ project.role_in_project }}</p>
+
+          <!-- section -->
+          <hr class="divider-separator" />
+          <!-- section -->
+
+          <!-- {{ project.project_description|safe }} -->
+        </div>
+      </div>
+
+      <!-- section -->
+      <hr class="divider-separator" />
+      <!-- section -->
+
+      <div class="level">
+        <div class="level-left">
+          <p class="has-text-light level-item">
+            <small> {{ article.date_published }} </small>
+          </p>
+        </div>
+        <div class="level-right">
+          <!-- for -->
+          {% for tag in article.tags.all %}
+          <!-- for -->
+
+          <p class="has-text-light level-item">
+            <small> |{{ tag }}| </small>
+          </p>
+
+          <!-- endfor -->
+          {% endfor %}
+          <!-- endfor -->
+        </div>
+      </div>
+
+      <!--  -->
+    </div>
+
+    <!-- else -->
+    {% else %}
+    <!-- else -->
+
+    <p class="title has-text-light has-text-centered">Something went wrong!</p>
+
+    <!-- endif -->
+    {% endif %}
+    <!-- endif -->
+
+    <!--  -->
+  </div>
+  <!--  -->
+</div>
+<!--  -->
+{% endblock %}
+<!-- extend body block -->
+
+<!-- body -->

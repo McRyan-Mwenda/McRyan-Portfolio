@@ -29,4 +29,31 @@ $(document).ready(function () {
     // Change image every 4.5 seconds
     setTimeout(showSlides, 4500);
   }
+
+  var workProjects = $("#wp");
+  var personalProjects = $("#pp");
+
+  var workTab = $("#wp-button");
+  var personalTab = $("#pp-button");
+
+  var workSection = $("#wp-tab");
+  var personalSection = $("#pp-tab");
+
+  personalProjects.hide();
+
+  workTab.click(function () {
+    personalSection.removeClass("is-active");
+    workSection.addClass("is-active");
+
+    personalProjects.hide();
+    workProjects.fadeIn();
+  });
+
+  personalTab.click(function () {
+    workSection.removeClass("is-active");
+    personalSection.addClass("is-active");
+
+    workProjects.hide();
+    personalProjects.fadeIn();
+  });
 });

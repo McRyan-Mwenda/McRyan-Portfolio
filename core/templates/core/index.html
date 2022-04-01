@@ -58,13 +58,13 @@
       <!--  -->
       <div class="tabs is-centered is-align-self-center level-item">
         <ul>
-          <li class="is-active">
-            <a class="has-text-light">
+          <li class="is-active" id="wp-tab">
+            <a class="has-text-light" id="wp-button">
               <span>Freelance/Work Projects</span>
             </a>
           </li>
-          <li>
-            <a class="has-text-light">
+          <li id="pp-tab">
+            <a class="has-text-light" id="pp-button">
               <span>Personal Projects</span>
             </a>
           </li>
@@ -79,7 +79,94 @@
   <!-- section -->
 
   <!-- portfolio section -->
-  <div class="portfolio-container"></div>
+  <div class="portfolio-container">
+    <div class="work-portfolio" id="wp">
+      <!-- if -->
+      {% if work_projects %}
+      <!-- if -->
+
+      <div class="portfolio container is-fluid">
+        <!-- for -->
+        {% for project in work_projects %}
+        <!-- for -->
+
+        <div class="portfolio-item">
+          <div class="portfolio-card card">
+            <div class="card-image">
+              <figure class="image is-256x256">
+                <img src="{{ project.image_context.url }}" alt="" />
+              </figure>
+            </div>
+          </div>
+          <!--  -->
+          <a
+            href="{% url 'this_project' project.slug %}"
+            class="has-text-info is-size-4 has-text-centered"
+            >{{ project.project_name }}</a
+          >
+        </div>
+
+        <!-- endfor -->
+        {% endfor %}
+        <!-- endfor -->
+      </div>
+
+      <!-- else -->
+      {% else %}
+      <!-- else -->
+
+      <p class="title has-text-light has-text-centered">
+        No work projects have been added yet.
+      </p>
+
+      <!-- endif -->
+      {% endif %}
+      <!-- endif -->
+    </div>
+    <div class="personal-portfolio" id="pp">
+      <!-- if -->
+      {% if personal_projects %}
+      <!-- if -->
+
+      <div class="portfolio container is-fluid">
+        <!-- for -->
+        {% for project in personal_projects %}
+        <!-- for -->
+
+        <div class="portfolio-item">
+          <div class="portfolio-card card">
+            <div class="card-image">
+              <figure class="image is-256x256">
+                <img src="{{ project.image_context.url }}" alt="" />
+              </figure>
+            </div>
+          </div>
+          <!--  -->
+          <a
+            href="{% url 'this_project' project.slug %}"
+            class="has-text-info is-size-4 has-text-centered"
+            >{{ project.project_name }}</a
+          >
+        </div>
+
+        <!-- endfor -->
+        {% endfor %}
+        <!-- endfor -->
+      </div>
+
+      <!-- else -->
+      {% else %}
+      <!-- else -->
+
+      <p class="title has-text-light has-text-centered">
+        No personal projects have been added yet.
+      </p>
+
+      <!-- endif -->
+      {% endif %}
+      <!-- endif -->
+    </div>
+  </div>
   <!-- portfolio section -->
 </div>
 <!--  -->

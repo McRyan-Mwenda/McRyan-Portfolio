@@ -3,13 +3,22 @@ from django.contrib import messages
 from django.core.mail import EmailMultiAlternatives
 from django.conf import settings
 from django.template.loader import render_to_string
-from .models import Article
+from .models import Article, Project
 
 # Create your views here.
 
 def home(request):
 
-    return render(request, 'core/index.html')
+    work = Project.objects.filter(project_category=0)
+
+    personal = Project.objects.filter(project_category=1)
+
+    context = {
+        'work_projects': work,
+        'personal_projects': personal,
+    }
+
+    return render(request, 'core/index.html', context)
 
 def contact(request):
 
@@ -68,3 +77,13 @@ def open_article(request, slug):
 def about_me(request):
 
     return render(request, 'core/about.html')
+
+def project_details(request, slug):
+
+    this_project = Project.objects.get(slug=slug)
+
+    context = {
+        'project': this_project,
+    }
+
+    return render(request, 'core/this_project.html', context)

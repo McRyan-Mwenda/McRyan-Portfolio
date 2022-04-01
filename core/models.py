@@ -48,3 +48,27 @@ class Article(models.Model):
         
         return self.title
 
+class Project(models.Model):
+
+    PROJECT_CATEGORY = (
+        (0, 'Work'),
+        (1, 'Personal')
+    )
+
+    image_context = CloudinaryField('thumbnail')
+
+    project_name = models.CharField(max_length = 225, unique = True)
+
+    slug = models.SlugField(max_length = 225, unique = True)
+
+    project_category = models.IntegerField(choices = PROJECT_CATEGORY, default = 0)
+
+    role_in_project = models.CharField(max_length = 225)
+
+    project_url = models.URLField(max_length = 225, unique = True)
+
+    project_description = RichTextField()
+
+    def __str__(self) -> str:
+        
+        return self.project_name

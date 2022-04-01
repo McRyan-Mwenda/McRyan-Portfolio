@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Tag, Article
+from .models import Tag, Article, Project
 
 # Register your models here.
 
@@ -39,3 +39,27 @@ class ArticleView(admin.ModelAdmin):
 
     date_hierarchy = 'date_published'
 
+@admin.register(Project)
+class ProjectView(admin.ModelAdmin):
+
+    model = Project
+
+    list_display = (
+        'project_name',
+        'role_in_project',
+    )
+
+    list_filter = (
+        'project_category',
+    )
+
+    search_fields = (
+        'project_name',
+        'role_in_project',
+    )
+
+    prepopulated_fields = {
+        "slug": (
+            "project_name",
+        )
+    }
