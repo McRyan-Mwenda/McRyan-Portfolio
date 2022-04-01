@@ -94,7 +94,11 @@
           <div class="portfolio-card card">
             <div class="card-image">
               <figure class="image is-256x256">
-                <img src="{{ project.image_context.url }}" alt="" />
+                <a
+                  href="{% url 'this_project' project.slug %}"
+                  class="has-text-info is-size-4 has-text-centered"
+                  ><img src="{{ project.image_context.url }}" alt=""
+                /></a>
               </figure>
             </div>
           </div>
@@ -137,7 +141,11 @@
           <div class="portfolio-card card">
             <div class="card-image">
               <figure class="image is-256x256">
-                <img src="{{ project.image_context.url }}" alt="" />
+                <a
+                  href="{% url 'this_project' project.slug %}"
+                  class="has-text-info is-size-4 has-text-centered"
+                  ><img src="{{ project.image_context.url }}" alt=""
+                /></a>
               </figure>
             </div>
           </div>

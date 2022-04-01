@@ -20,8 +20,6 @@ class Article(models.Model):
 
     title = models.CharField(max_length = 225, unique = True)
 
-    subtitle = models.CharField(max_length = 225, blank = True)
-
     slug = models.SlugField(max_length = 225, unique = True)
 
     thumbnail = CloudinaryField('thumbnail')
@@ -48,6 +46,18 @@ class Article(models.Model):
         
         return self.title
 
+class KindWord(models.Model):
+
+    person = models.CharField(max_length = 225)
+
+    description = models.CharField(max_length = 2225)
+
+    comments = models.TextField()
+
+    def __str__(self) -> str:
+        
+        return f'{self.person} -> {self.description}'
+
 class Project(models.Model):
 
     PROJECT_CATEGORY = (
@@ -67,7 +77,9 @@ class Project(models.Model):
 
     project_url = models.URLField(max_length = 225, unique = True)
 
-    project_description = RichTextField()
+    github_url = models.URLField(max_length = 225, blank = True)
+
+    comments = models.ManyToManyField(KindWord, blank = True)
 
     def __str__(self) -> str:
         

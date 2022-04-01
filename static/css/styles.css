@@ -203,7 +203,6 @@ html {
 
 .education,
 .experience {
-  padding: 1rem;
   border-radius: 0.5rem;
 }
 
@@ -246,6 +245,20 @@ html {
 .portfolio-container {
   scrollbar-width: thin;
   scrollbar-color: white darkgray;
+}
+
+.kind-words {
+  background-color: whitesmoke !important;
+}
+
+.to-github {
+  width: fit-content;
+  margin: auto;
+}
+
+.all-articles {
+  width: fit-content;
+  margin: auto;
 }
 
 /* custom styles */

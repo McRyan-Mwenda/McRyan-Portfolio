@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Tag, Article, Project
+from .models import Tag, Article, Project, KindWord
 
 # Register your models here.
 
@@ -46,7 +46,7 @@ class ProjectView(admin.ModelAdmin):
 
     list_display = (
         'project_name',
-        'role_in_project',
+        'project_category',
     )
 
     list_filter = (
@@ -63,3 +63,16 @@ class ProjectView(admin.ModelAdmin):
             "project_name",
         )
     }
+
+@admin.register(KindWord)
+class KindWordView(admin.ModelAdmin):
+
+    model = KindWord
+
+    list_filter = (
+        'description',
+    )
+
+    search_field = (
+        'description',
+    ) 

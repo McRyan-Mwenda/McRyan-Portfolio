@@ -31,7 +31,7 @@
     <div class="article-in-detail">
       <!--  -->
       <div class="article-intro has-text-centered">
-        <p class="is-size-2 has-text-weight-semibold has-text-warning">
+        <p class="title has-text-warning">
           {{ project.project_name }}
         </p>
         <p class="has-text-light">
@@ -63,40 +63,71 @@
           <hr class="divider-separator" />
           <!-- section -->
 
-          <p class="subtitle">Role: {{ project.role_in_project }}</p>
+          <p class="subtitle has-text-weight-semibold">
+            My role in the project: {{ project.role_in_project }}
+          </p>
 
           <!-- section -->
           <hr class="divider-separator" />
           <!-- section -->
-
-          <!-- {{ project.project_description|safe }} -->
         </div>
       </div>
+
+      <!-- if -->
+      {% if project.comments.all %}
+      <!-- if -->
 
       <!-- section -->
       <hr class="divider-separator" />
       <!-- section -->
 
-      <div class="level">
-        <div class="level-left">
-          <p class="has-text-light level-item">
-            <small> {{ article.date_published }} </small>
+      <p
+        class="title has-text-warning has-text-centered is-align-self-center"
+        id="about-section"
+      >
+        Kind words
+      </p>
+
+      <!-- section -->
+      <hr class="divider-separator" />
+      <!-- section -->
+
+      <div class="comments-contanier">
+        <!-- for -->
+        {% for comment in project.comments.all %}
+        <!-- for -->
+        <div class="kind-words box">
+          <p class="is-size-5">"{{ comment.comments }}"</p>
+          <br />
+          <p><i class="bi bi-arrow-right-short"></i> {{ comment.person }}</p>
+          <p>
+            <i class="bi bi-arrow-right-short"></i> {{ comment.description }}
           </p>
         </div>
-        <div class="level-right">
-          <!-- for -->
-          {% for tag in article.tags.all %}
-          <!-- for -->
-
-          <p class="has-text-light level-item">
-            <small> |{{ tag }}| </small>
-          </p>
-
-          <!-- endfor -->
-          {% endfor %}
-          <!-- endfor -->
-        </div>
+        <!-- endfor -->
+        {% endfor %}
+        <!-- endfor -->
       </div>
+
+      <!-- else -->
+      {% else %}
+      <!-- else -->
+
+      <!-- section -->
+      <hr class="divider-separator" />
+      <!-- section -->
+
+      <div class="to-github">
+        <a
+          href="{{ project.github_url }}"
+          class="button is-primary has-text-black"
+          >View on GitHub__ <i class="bi bi-github"></i
+        ></a>
+      </div>
+
+      <!-- endif -->
+      {% endif %}
+      <!-- endif -->
 
       <!--  -->
     </div>

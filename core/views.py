@@ -56,7 +56,7 @@ def contact(request):
 
 def articles(request):
 
-    all_articles = Article.objects.all()
+    all_articles = Article.objects.filter(status=1)
 
     context = {
         'articles': all_articles,
