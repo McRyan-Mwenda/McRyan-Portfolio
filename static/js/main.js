@@ -56,4 +56,18 @@ $(document).ready(function () {
     workProjects.hide();
     personalProjects.fadeIn();
   });
+
+  var backTop = $("#back-top");
+
+  backTop.hide();
+
+  $(window).scroll(function () {
+    var scroll = $(document).scrollTop();
+
+    if (scroll > 500) {
+      backTop.fadeIn();
+    } else {
+      backTop.fadeOut();
+    }
+  });
 });

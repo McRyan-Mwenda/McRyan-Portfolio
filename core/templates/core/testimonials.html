@@ -29,13 +29,12 @@
     {% for words in kind_words %}
     <!-- for -->
 
-    <article class="message is-success is-medium">
-      <div class="message-header">
-        <p>{{ words.person }}</p>
-        <p>{{ words.description }}</p>
-      </div>
+    <article class="all-comments message is-dark">
       <div class="message-body">
         <p class="is-size-5">"{{ words.comments }}"</p>
+        <br />
+        <p><i class="bi bi-arrow-right-short"></i> {{ words.person }}</p>
+        <p><i class="bi bi-arrow-right-short"></i> {{ words.description }}</p>
       </div>
     </article>
 
