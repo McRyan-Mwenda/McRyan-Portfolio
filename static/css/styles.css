@@ -157,7 +157,8 @@ html {
 }
 
 .this-article-container,
-.articles-container {
+.articles-container,
+.testimonials-container {
   width: 80% !important;
   margin: auto !important;
 }

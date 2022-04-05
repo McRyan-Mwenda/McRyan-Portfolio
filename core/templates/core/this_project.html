@@ -31,9 +31,7 @@
     <div class="article-in-detail">
       <!--  -->
       <div class="article-intro has-text-centered">
-        <p class="title has-text-warning">
-          {{ project.project_name }}
-        </p>
+        <p class="title has-text-warning">{{ project.project_name }}</p>
         <p class="has-text-light">
           click link <i class="bi bi-arrow-right-short"></i>
           <a
@@ -96,13 +94,15 @@
         <!-- for -->
         {% for comment in project.comments.all %}
         <!-- for -->
-        <div class="kind-words box">
-          <p class="is-size-5">"{{ comment.comments }}"</p>
-          <br />
-          <p><i class="bi bi-arrow-right-short"></i> {{ comment.person }}</p>
-          <p>
-            <i class="bi bi-arrow-right-short"></i> {{ comment.description }}
-          </p>
+        <div class="kind-words message is-warning">
+          <div class="message-body">
+            <p class="is-size-5">"{{ comment.comments }}"</p>
+            <br />
+            <p><i class="bi bi-arrow-right-short"></i> {{ comment.person }}</p>
+            <p>
+              <i class="bi bi-arrow-right-short"></i> {{ comment.description }}
+            </p>
+          </div>
         </div>
         <!-- endfor -->
         {% endfor %}

@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.core.mail import EmailMultiAlternatives
 from django.conf import settings
 from django.template.loader import render_to_string
-from .models import Article, Project
+from .models import Article, Project, KindWord
 
 # Create your views here.
 
@@ -82,8 +82,21 @@ def project_details(request, slug):
 
     this_project = Project.objects.get(slug=slug)
 
+    is_personal_project = True
+
     context = {
         'project': this_project,
+        'is_personal': is_personal_project,
     }
 
     return render(request, 'core/this_project.html', context)
+
+def testimonials(request):
+
+    comments = KindWord.objects.all()
+
+    context = {
+        'kind_words': comments,
+    }
+
+    return render(request, 'core/testimonials.html', context)
